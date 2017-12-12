@@ -7,3 +7,5 @@ https://maps.googleapis.com/maps/api/directions/json?origin=43.604134687,1.44542
 JCDecaux :
 
 d49cda7da950991d5b7d1c11354cc0e4181d5a77
+
+https://api.jcdecaux.com/vls/v1/stations?contract=Toulouse&apiKey=d49cda7da950991d5b7d1c11354cc0e4181d5a77
