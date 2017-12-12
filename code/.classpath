@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="Z:/ProjetGraphes/ProjetGraphesMIASHS/ProjetGraphesMIASHS/code/bin/json"/>
+	<classpathentry kind="lib" path="/home/arnaud/Documents/Travail/L3/ProjetGraphes/JSON/bin/org"/>
+	<classpathentry kind="src" path="/JSON"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
