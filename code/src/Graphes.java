@@ -15,7 +15,7 @@ public class Graphes {
 	public Graphes(){
 		mesStations = new ArrayList<Station>();
 	}
-	
+
 	
 	public static void recupStation() throws FileNotFoundException, IOException, ParseException{
 		JSONParser parser = new JSONParser();
@@ -23,19 +23,13 @@ public class Graphes {
 	
 		for (int i = 0; i < a.size(); i++) {
 			JSONObject o = (JSONObject) a.get(i);
-			mesStations.add(new Station((String) o.get("number"), (String) o.get("name"), (String) o.get("adress"),
+			mesStations.add(new Station((Long) o.get("number"), (String) o.get("name"), (String) o.get("adress"),
 					(double) o.get("latitude"), (double) o.get("longitude")));
 		}
 		
 		
 	}
 	
-	
-	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
-		recupStation();
-		lierStations(mesStations);
-
-	}
 
 	public static double distFrom(double lat1, double lng1, double lat2, double lng2) {
 	    double earthRadius = 6371000; //meters
@@ -50,13 +44,13 @@ public class Graphes {
 	    return dist;
 	  }
 	
-	public static void lierStations(ArrayList<Station> mesStations2) {
+	public static void lierStations() {
 		double plusCourt = 99999;
 		double dist = 0;
 		Station plusProche = null;
-		for(Station currentStation : mesStations2){
+		for(Station currentStation : mesStations){
 			plusCourt = 99999;
-			for(Station currentStation2 : mesStations2){
+			for(Station currentStation2 : mesStations){
 				if(currentStation2 != currentStation){
 					dist = distFrom(currentStation.getLatitude(), currentStation.getLongitude(), currentStation2.getLatitude(), currentStation2.getLongitude());
 					if(dist<2){
@@ -74,4 +68,18 @@ public class Graphes {
 		}
 	}
 
+	
+	public static String afficherGraphe(){
+		StringBuilder graphe = new StringBuilder();
+
+		for(Station currentStation : mesStations){
+			graphe.append("{"+currentStation.getNom()+"}\n[");
+			for(Station currentSousStation : currentStation.getProches()){
+				graphe.append(currentSousStation.getNom()+",");
+			}
+			graphe.append("]\n\n");
+		}
+		
+		return graphe.toString();
+	}
 }
