@@ -53,8 +53,9 @@ public class Graphes {
 			for(Station currentStation2 : mesStations){
 				if(currentStation2 != currentStation){
 					dist = distFrom(currentStation.getLatitude(), currentStation.getLongitude(), currentStation2.getLatitude(), currentStation2.getLongitude());
-					if(dist<2){
-						currentStation.getProches().add(currentStation2);
+					if(dist<2000){
+						currentStation.setProcheSuiv(currentStation2);
+						//System.out.println(currentStation.getNom()+" add : "+currentStation2.getNom());
 					}
 					if(dist<plusCourt){
 						plusCourt=dist;
@@ -63,7 +64,9 @@ public class Graphes {
 				}
 			}
 			if(currentStation.getProches().size()==0){
-				currentStation.getProches().add(plusProche);
+				currentStation.setProcheSuiv(plusProche);
+				//System.out.println(currentStation.getNom()+" add : "+currentStation2);
+
 			}
 		}
 	}
