@@ -2,8 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/arnaud/Documents/Travail/L3/ProjetGraphes/JSON/bin/org"/>
 	<classpathentry kind="src" path="/JSON"/>
-	<classpathentry kind="lib" path="/home/arnaud/Téléchargements/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/arnaud/Documents/Travail/L3/ProjetGraphes/ProjetGraphesMIASHS/code/lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
