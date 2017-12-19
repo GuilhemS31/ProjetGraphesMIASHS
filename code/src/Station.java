@@ -1,8 +1,6 @@
 
 public class Station {
 
-	
-	/*lol*/
 	//statique 
 	private String numero;
 	private String nom;
