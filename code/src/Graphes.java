@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -23,6 +22,8 @@ public class Graphes {
 			mesStations.add(new Station((String) o.get("number"), (String) o.get("name"), (String) o.get("adress"),
 					(double) o.get("latitude"), (double) o.get("longitude")));
 		}
+		
+		
 	}
 
 }

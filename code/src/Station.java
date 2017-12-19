@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Station {
 
@@ -14,12 +15,16 @@ public class Station {
 	private int attacheVeloDispo;
 	private int veloDispo;
 	
+	//Station proches
+	ArrayList<Station> proches;
+	
 	public Station(String num, String nom, String adr, double lat, double longi){
 		this.numero = num;
 		this.nom = nom;
 		this.adresse = adr;
 		this.latitude = lat;
 		this.longitude = longi;
+		proches = new ArrayList<Station>();
 	}
 
 	//statique 
@@ -63,4 +68,8 @@ public class Station {
 		this.veloDispo = veloDispo;
 	}
 	
+	//Stations
+	public ArrayList<Station> getProches(){
+		return this.proches;
+	}
 }
