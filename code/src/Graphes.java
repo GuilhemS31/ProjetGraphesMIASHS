@@ -2,6 +2,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Map.Entry;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -78,8 +79,8 @@ public class Graphes {
 
 		for(Station currentStation : mesStations){
 			graphe.append("{"+currentStation.getNom()+"}\n[");
-			for(Station currentSousStation : currentStation.getProches()){
-				graphe.append(currentSousStation.getNom()+" || ");
+			for(Station currentSousStation : currentStation.getProches().keySet()){
+				graphe.append("a " + currentStation.getProches().get(currentSousStation).doubleValue() +"m "+currentSousStation.getNom()+" || ");
 			}
 			graphe.append("]\n\n");
 		}

@@ -18,7 +18,7 @@ public class Station {
 	private int veloDispo;
 	
 	//Station proches
-	Map<Station,Double> proches;
+	HashMap<Station,Double> proches;
 	
 	public Station(long num, String nom, String adr, double lat, double longi){
 		this.numero = num;
