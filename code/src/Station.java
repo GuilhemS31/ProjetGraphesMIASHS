@@ -72,4 +72,8 @@ public class Station {
 	public ArrayList<Station> getProches(){
 		return this.proches;
 	}
+	
+	public void setProcheSuiv(Station s){
+		this.proches.add(s);
+	}
 }
