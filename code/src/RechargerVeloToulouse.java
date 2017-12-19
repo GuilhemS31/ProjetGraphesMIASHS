@@ -11,5 +11,6 @@ public class RechargerVeloToulouse {
 		monGraphe.recupStation();
 		monGraphe.lierStations();
 		System.out.println(monGraphe.afficherGraphe());
+		//lel
 	}
 }
