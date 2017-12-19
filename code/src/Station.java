@@ -6,10 +6,9 @@ public class Station {
 	//statique 
 	private String numero;
 	private String nom;
+	private String adresse;
 	private double latitude;
 	private double longitude;
-	private boolean banking;
-	private boolean bonus;
 	
 	//dynamique
 	private String status;
@@ -17,7 +16,13 @@ public class Station {
 	private int attacheVeloDispo;
 	private int veloDispo;
 	
-	
+	public Station(String num, String nom, String adr, double lat, double longi){
+		this.numero = num;
+		this.nom = nom;
+		this.adresse = adr;
+		this.latitude = lat;
+		this.longitude = longi;
+	}
 
 	//statique 
 	public String getNumero() {
@@ -31,12 +36,6 @@ public class Station {
 	}
 	public double getLongitude() {
 		return longitude;
-	}
-	public boolean isBanking() {
-		return banking;
-	}
-	public boolean isBonus() {
-		return bonus;
 	}
 	
 
