@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Station {
 
@@ -16,7 +18,7 @@ public class Station {
 	private int veloDispo;
 	
 	//Station proches
-	ArrayList<Station> proches;
+	Map<Station,Double> proches;
 	
 	public Station(long num, String nom, String adr, double lat, double longi){
 		this.numero = num;
@@ -24,7 +26,7 @@ public class Station {
 		this.adresse = adr;
 		this.latitude = lat;
 		this.longitude = longi;
-		proches = new ArrayList<Station>();
+		this.proches = new HashMap<Station,Double>();
 	}
 
 	//statique 
@@ -69,11 +71,11 @@ public class Station {
 	}
 	
 	//Stations
-	public ArrayList<Station> getProches(){
+	public Map<Station,Double> getProches(){
 		return this.proches;
 	}
 	
-	public void setProcheSuiv(Station s){
-		this.proches.add(s);
+	public void setProcheSuiv(Station s,Double d){
+		this.proches.put(s,d);
 	}
 }

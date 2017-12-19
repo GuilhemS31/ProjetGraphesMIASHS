@@ -78,7 +78,7 @@ public class Graphes {
 		for(Station currentStation : mesStations){
 			graphe.append("{"+currentStation.getNom()+"}\n[");
 			for(Station currentSousStation : currentStation.getProches()){
-				graphe.append(currentSousStation.getNom()+",");
+				graphe.append(currentSousStation.getNom()+" || ");
 			}
 			graphe.append("]\n\n");
 		}
