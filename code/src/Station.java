@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Station {
 
 	//statique 
-	private String numero;
+	private long numero;
 	private String nom;
 	private String adresse;
 	private double latitude;
@@ -18,7 +18,7 @@ public class Station {
 	//Station proches
 	ArrayList<Station> proches;
 	
-	public Station(String num, String nom, String adr, double lat, double longi){
+	public Station(long num, String nom, String adr, double lat, double longi){
 		this.numero = num;
 		this.nom = nom;
 		this.adresse = adr;
@@ -28,7 +28,7 @@ public class Station {
 	}
 
 	//statique 
-	public String getNumero() {
+	public long getNumero() {
 		return numero;
 	}
 	public String getNom() {
